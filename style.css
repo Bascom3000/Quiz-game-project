@@ -20,7 +20,9 @@
     }
 
     
+
     body{
+        overflow: hidden;
         display: flex;
         justify-content: center;
         align-items: center ;
@@ -32,6 +34,7 @@
         background-size: cover;
         cursor: url("cursor.cur"), auto;
     }
+    
     .quiz-container{
         border-radius: 10px;
         display: flex;
@@ -204,7 +207,7 @@
 
          
     }
-
+    
 
     li:hover {
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -291,7 +294,7 @@
         height: 50%;
         color: #AFF497;
         font-size: 1.5rem;
-        margin-top: 4%;
+        margin-top: 3%;
         font-family: 'Alien', sans-serif;
         cursor: url("cursor.cur"), auto;
     }
@@ -373,7 +376,7 @@
         width: 100%;
         height: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
 
         
@@ -384,7 +387,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 50%;
+        width: 40%;
         height: auto;
         align-items: center;
     }
@@ -401,29 +404,39 @@
         width: 435px;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         border-radius: 15px;
-        padding-left: 42px;
-        padding-right: 42px;
-        padding-top: 10px;
-        padding-bottom: 10px;
         display: flex;
         flex-direction: row;
+        justify-content: center;
         margin-top: 7%;
+        padding-top: 2%;
         
     }
     
-    #congratsMesgBox p{
+    .scrollBar p{
         background-color: #AAFFFF;
         font-weight: 700;
         font-size: 1rem;
-        line-height: 14px;
+        line-height: 20px;
         display: flex;
         align-items: center;
         color: rgba(32, 36, 123, 0.75);
         font-family: "Share Tech", sans-serif;
     
     }
-    
-    
+    .scrollBar {
+        width: 90%;
+        height: 90%;
+        overflow-y: scroll;
+        /* scrollbar-color: rebeccapurple green;
+        scrollbar-width: thin; */
+        
+      }
+
+  .scrollBar::-webkit-scrollbar{
+        width: 100%;
+        
+   }
+
     #scoreBox {
         display: flex;
         background-color: rgba(184, 146, 255, 0.79);
@@ -471,15 +484,16 @@
     
     #rightColumn {
         display: flex;
-        align-items: center;
         flex-direction: column;
         justify-content: center;
-        width: 50%;
-        height: 70%;
+        align-items: center;
+        width: 40%;
+        height: auto;
+        align-items: center;
     }
     
     #resultatIllustration {
-        width: 80%;
+        width: 65%;
         height: 80%;
         filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.25));
         background: rgba(184, 146, 255, 0.79);
@@ -838,5 +852,23 @@
       
     li {
         font-size: 0.5rem;
+    }
+}
+
+
+@media screen and (min-width: 1084px){
+    #btn, #btn_suivant, #btn_resultat{
+        width: 10vw;
+        height: 30%;
+    }    
+
+
+    li:last-child{
+        margin-bottom: 0;
+    }
+
+    ul{
+        margin-bottom: 0;
+        margin-top: 13.5%;
     }
 }

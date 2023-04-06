@@ -20,6 +20,7 @@
 }
 
 body {
+  overflow: hidden;
     background-color: rgb(21, 28, 82);
     display: flex;
     justify-content: center;
@@ -78,7 +79,6 @@ body {
   h2 {
     color: #0ff;
     text-align: center;
-    vertical-align: text-middle;
     font-size: 25px;
     font-family: "Share Tech", sans-serif;
     margin: 0;
@@ -103,25 +103,24 @@ body {
     padding-bottom: 10px; */
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    justify-content: center;
+    
     margin-top: 7%;
   }
   .infoboxopening {
     color: rgba(32, 35, 123, 0.75);
     text-align: center;
-    vertical-align: text-middle;
-    font-size: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 20px;
     font-family: "Share Tech", sans-serif;
-    align-self: flex-start;
-    left: 42px;
-    top: 100px;
-    line-height: auto;
     border-style: hidden;
     outline: none;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    padding-top: 4%;
     box-shadow: 1px 1px 30px 5px #0ff;
-    padding: 5vh;
+    
   }
   .rectangle7 {
     width: 525px;
@@ -165,7 +164,24 @@ body {
     border-radius: 15px;
     box-shadow: 4px 1px 30px 5px rgba(52, 27, 128, 0.666) inset;
     box-shadow: 1px 1px 10px 3px #8bf39973 inset;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
+
+  .scroller {
+        width: 90%;
+        height: 90%;
+        padding-right: 1%;
+        overflow-y: scroll;
+        /* scrollbar-color: rebeccapurple green;
+        scrollbar-width: thin; */
+      }
+
+  .scroller::-webkit-scrollbar{
+        width: 100%;
+   }
+   
   .start {
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: black;
@@ -272,7 +288,19 @@ body {
   
   
   
-  
+  @media screen and (min-width: 1084px){
+    body{
+      flex-direction: row;
+      justify-content: center;
+    }
+    #leftColumn {
+      margin-right: 10%;
+    }
+
+
+
+
+  }
   
   
   

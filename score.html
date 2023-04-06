@@ -26,7 +26,8 @@
             </div>
             
         </div>
-        <div id="congratsMesgBox">
+        <div id="congratsMesgBox" >
+            <div class="scrollBar">
             <!-- message qui varie selon le score -->
             <!-- <p id="reallyGood">Congratulations, space traveler! You have successfully completed our coding quiz and proven that you have what it takes to soar to new heights in the world of programming.
                 <br><br>
@@ -37,6 +38,7 @@
             <p id="goToWork">Don't worry, space explorer! Even though your score may not have been as high as you had hoped, you still have plenty of time to improve. 
                 <br><br>
                 Like any space traveler, you must keep exploring and learning new things. Don't be afraid to make mistakes or stumble, for that is how you can improve and find your own way to the stars. So, stay the course and never give up on your dream of becoming a web development master!</p> -->
+            </div>
         </div>
     </div>
 
@@ -59,7 +61,7 @@
         const score_valeure = document.querySelector("#finaleScore");
         const value = localStorage.getItem("score-value");
         finaleScore.innerHTML = `<p> ${value} /10 </p>`;
-        const contenu = document.querySelector("#congratsMesgBox")
+        const contenu = document.querySelector(".scrollBar")
         const msg = document.createElement('p')
         const resultatIllustration = document.querySelector("#resultatIllustration")
         img = document.createElement("img")
@@ -71,7 +73,7 @@
             resultatIllustration.appendChild(img)
             
              
-            msg.innerHTML = "Congratulations, space traveler! You have successfully completed our coding quiz and proven that you have what it takes to soar to new heights in the world of programming. Just as space travel requires careful planning, precise calculations, and a willingness to push beyond the boundaries of what's been done before, coding requires a similar set of skills and determination. By acing our quiz, you have demonstrated that you possess the knowledge and expertise to take on any coding challenge that comes your way"
+            msg.innerHTML = "Congratulations, space traveler! You have successfully completed our coding quiz and proven that you have what it takes to soar to new heights in the world of programming. Just as space travel requires careful planning, precise calculations, and a willingness to push beyond the boundaries of what's been done before, coding requires a similar set of skills and determination. By acing our quiz, you have demonstrated that you possess the knowledge and expertise to take on any coding challenge that comes your way."
 
         
             contenu.appendChild(msg); 
@@ -86,7 +88,7 @@
         }
         if ( value < 5 )
         {
-           msg.innerHTML="Don't worry, space explorer! Even though your score may not have been as high as you had hoped, you still have plenty of time to improve.Like any space traveler, you must keep exploring and learning new things.Don't be afraid to make mistakes or stumble, for that is how you can improve and find your own way to the stars. So, stay the course and never give up on your dream of becoming a web development master"
+           msg.innerHTML="Don't worry, space explorer! Even though your score may not have been as high as you had hoped, you still have plenty of time to improve.Like any space traveler, you must keep exploring and learning new things.Don't be afraid to make mistakes or stumble, for that is how you can improve and find your own way to the stars. So, stay the course and never give up on your dream of becoming a web development master."
            img.src = "ewok.png"
             resultatIllustration.appendChild(img)
            contenu.appendChild(msg); 
